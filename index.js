@@ -17,7 +17,15 @@ global.roomid = 1;
 global.rooms = {};  
 
 
-var http = require('http');
+// var http = require('http');
+// var app = require('./app');
+// http.createServer(app).listen(global.port, global.host);
+// console.log('Server running at http://' + global.host + ':' + global.port);
+
+
+
 var app = require('./app');
-http.createServer(app).listen(global.port, global.host);
-console.log('Server running at http://' + global.host + ':' + global.port);
+
+app.listen(global.port || 8080, function() {
+  console.log("Node app is running at localhost:" + global.port || 8080)
+})
