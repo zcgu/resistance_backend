@@ -1,7 +1,11 @@
-var url = require('express');
-
-url.changename = '/changename'
-url.createroom = '/createroom';
-url.joinroom = '/joinroom';
-
-module.exports = url;
+module.exports = {
+  changename: '/changename',
+  createroom: '/createroom',
+  joinroom:   '/joinroom',
+  start:      '/start',
+  setcandidate: '/setcandidate',
+  finishspeech: '/finishspeech',
+  vote:       '/vote',
+  mission:    '/mission',
+  check:      '/check'
+};
